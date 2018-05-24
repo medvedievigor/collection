@@ -1,4 +1,7 @@
 public interface UserRunner {
-    public  void run();
+    public  void addUsers();
+    public  void removeUsers();
+    public void printUsers ();
+
 
 }

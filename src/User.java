@@ -1,14 +1,14 @@
 import java.util.Objects;
 
-public class User {
-    private   String id;
+public class User implements Comparable {  //необходим метод compareTo для отображения элементов в treeSet
+    private   int id;
     private String name;
-    public User (String id, String name) {
+    public User (int id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public String getId () {
+    public int getId () {
         return id;
     }
 
@@ -38,5 +38,10 @@ public class User {
     public int hashCode () {
 
         return Objects.hash(id, name);
+    }
+
+   @Override
+    public int compareTo (Object o) {
+        return 1;
     }
 }
